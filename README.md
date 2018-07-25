@@ -1,7 +1,7 @@
-# etherdelta.github.io
+# etherdelta
 
-- git copy https://github.com/LaGuer/etherdelta.github.io
+- git copy https://github.com/LaGuer/etherdelta
 
 visualize with:
 
-- https://LaGuer.github.io/etherdelta.github.io
+- https://LaGuer.github.io/etherdelta
