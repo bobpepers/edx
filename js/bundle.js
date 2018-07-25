@@ -1189,7 +1189,7 @@ module.exports = (config) => {
 /* eslint-env browser */
 
 module.exports = {
-  homeURL: 'https://etherdelta.github.io',
+  homeURL: 'https://laguer.github.io/etherdelta',
   // homeURL: 'http://localhost:8080',
   contractEtherDelta: 'smart_contract/etherdelta.sol',
   contractToken: 'smart_contract/token.sol',
@@ -1429,6 +1429,7 @@ module.exports = {
   defaultPair: { token: 'PLU', base: 'ETH' },
   pairs: [
     { token: 'PLU', base: 'ETH' },
+    { token: 'AMIS', base: 'ETH' },
     { token: '1ST', base: 'ETH' },
     { token: 'EDG', base: 'ETH' },
     { token: 'ARC', base: 'ETH' },
@@ -2046,7 +2047,7 @@ EtherDelta.prototype.displayVolumes = function displayVolumes(orders, blockNumbe
   let tokenVolumes = {};
   let pairVolumes = {};
   const timeFrames = [86400 * 1000 * 7, 86400 * 1000 * 1];
-  const mainBases = ['DUSD', 'ETH']; // in order of priority
+  const mainBases = ['DAI', 'ETH']; // in order of priority
   const now = new Date();
   // the default pairs
   for (let i = 0; i < this.config.pairs.length; i += 1) {
