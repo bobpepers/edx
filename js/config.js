@@ -2,7 +2,7 @@
 /* eslint-env browser */
 
 module.exports = {
-  homeURL: 'https://etherdelta.github.io',
+  homeURL: 'https://laguer.github.io/etherdelta/',
   // homeURL: 'http://localhost:8080',
   contractEtherDelta: 'smart_contract/etherdelta.sol',
   contractToken: 'smart_contract/token.sol',
@@ -242,6 +242,7 @@ module.exports = {
   defaultPair: { token: 'PLU', base: 'ETH' },
   pairs: [
     { token: 'PLU', base: 'ETH' },
+    { token: 'AMIS', base: 'ETH' },
     { token: '1ST', base: 'ETH' },
     { token: 'EDG', base: 'ETH' },
     { token: 'ARC', base: 'ETH' },
