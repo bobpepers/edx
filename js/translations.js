@@ -34,7 +34,7 @@ module.exports = {
     en: 'EtherDelta is a decentralized exchange for Ethereum tokens.',
     cn: 'EtherDelta是去中心化的以太坊交易平台。',
     fr: "EtherDelta est une bourse d'échange de jetons ethereum décentralisé.",
-    es: 'EtherDelta se ha posicionado como la primera bolsa de cambio de cryptomonedas y symbolicos de la blockchain Ethereum.',
+    es: 'EtherDelta se ha posicionado como la primera bolsa de cambio de cryptomonedas y tokens de la blockchain Ethereum.',
     // cn:'EtherDelta是无中心的以太坊交易平台。'
   },
   Smart_Contract: {
@@ -67,6 +67,30 @@ module.exports = {
     fr: 'How-to videos',
     es: 'A ver las videos',
   },
+  expires_explanation: {
+    en: 'The number of Ethereum blocks until the order automatically expires. (14 seconds per block.)',
+    cn: '直到订单自动过期的Etherem块的数量。 (每个块都是14秒。)',
+    fr: 'Le nombre de blocs Ethereum jusqu\'à ce que l\'ordre expire automatiquement. (Chaque bloc est de 14 secondes.)',
+    es: 'El número de bloques Ethereum hasta que el pedido expire automáticamente. (Cada bloque es de 14 segundos.)',
+  },
+  gas_price: {
+    en: 'Gas price',
+    cn: '气体价格',
+    fr: 'Prix de l\'essence',
+    es: 'Precio del gas',
+  },
+  gas_price_gwei: {
+    en: 'Gas price (gwei)',
+    cn: '气体价格 (gwei)',
+    fr: 'Prix de l\'essence (gwei)',
+    es: 'Precio del gas (gwei)',
+  },
+  set_gas_price: {
+    en: 'Set gas price',
+    cn: '气体价格',
+    fr: 'Prix de l\'essence',
+    es: 'Precio del gas',
+  },
   FAQ: {
     en: 'FAQ',
     cn: 'FAQ',
@@ -98,11 +122,10 @@ module.exports = {
     es: 'Profundidad',
   },
   only_7_days: {
-    en: 'Note: EtherDelta will only show transactions from the last 7 days.',
-    cn: 'Note: EtherDelta 只会显示近7天的交易记录',
-    // cn:'Note: EtherDelta will only show transactions from the last 7 days.'
-    fr: 'Note: EtherDelta ne montrera que les 7 derniers jours de transactions.',
-    es: 'Nota Bene: EtherDelta sólo mostrará las transacciones de los últimos 7 días.',
+    en: 'Note: EtherDelta will only show recent transactions.',
+    cn: '注意：EtherDelta只会显示最近的交易。',
+    fr: 'Remarque: EtherDelta affichera uniquement les transactions récentes.',
+    es: 'Nota: EtherDelta sólo mostrará transacciones recientes.',
   },
 
   announcements: {
@@ -122,7 +145,7 @@ module.exports = {
     cn: '订单',
     // cn:'订单簿'
     fr: 'Ordres',
-    es: 'Pedidas',
+    es: 'Pedidos',
   },
   follow_twitter: {
     en: 'Follow us on Twitter',
@@ -136,7 +159,7 @@ module.exports = {
     cn: '聊天',
     // cn:'聊'
     fr: 'Causerie',
-    es: 'Hogar del chat',
+    es: 'Chat',
   },
   send: {
     en: 'Send',
@@ -155,7 +178,7 @@ module.exports = {
     en: 'Pair',
     cn: '交易币种',
     fr: 'Paire',
-    es: 'Paras',
+    es: 'Parejas',
   },
   produced_etherboost: {
     en: 'Produced by Etherboost',
@@ -338,16 +361,14 @@ module.exports = {
   token: {
     en: 'Token',
     cn: '币种',
-    // cn:'币'
     fr: 'Jeton',
-    es: 'Simbolico',
+    es: 'Token',
   },
   tokens: {
     en: 'Tokens',
     cn: '币种',
-    // cn:'币'
     fr: 'Jetons',
-    es: 'Simbolicso',
+    es: 'Tokens',
   },
   aug032016: {
     en: 'August 3, 2016',
@@ -358,7 +379,6 @@ module.exports = {
   aug032016_announcement: {
     en: 'EtherDelta has moved to a new smart contract. Go to the bottom of the page and switch to the old one if you have a balance there you need to withdraw.',
     cn: 'EtherDelta更新了智能合约。如果你要提取余额，请到本页底部转成旧的合约并进行提取。',
-    // cn:'EtherDelta迁移到了新的智能合约。如果你要提取余额，请到本页底部转成旧的。'
     fr: "EtherDelta a ete modifié pour un nouveau smart contract. Allez au bas de page et permutez le avec l'ancien s'il reste du solde à retirer.",
   },
   aug302016: {
@@ -859,7 +879,7 @@ module.exports = {
     en: 'Trades',
     cn: '交易',
     fr: 'Trades',
-    es: 'Trades',
+    es: 'Historial',
   },
   auto_refresh: {
     en: 'Auto refresh',
@@ -871,7 +891,7 @@ module.exports = {
     en: 'My transactions',
     cn: '我的交易',
     fr: 'Mes transactions',
-    es: 'Meis transacciones',
+    es: 'Mis transacciones',
   },
   or: {
     en: 'or',
