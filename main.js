@@ -114,7 +114,7 @@ EtherDelta.prototype.alertTxResult = function alertTxResult(err, txsIn) {
         tx.txHash !== '0x0000000000000000000000000000000000000000000000000000000000000000'
       ) {
         this.alertDialog(
-          `You just created an Ethereum transaction. Track its progress: <a href="http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io/tx/${tx.txHash}" target="_blank">${tx.txHash}</a>.`);
+          `You just created an Ethereum transaction. Track its progress: <a href="http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io/tx/${tx.txHash}" target="_blank">${tx.txHash}</a>.`);
       } else {
         this.alertError("You tried to send an Ethereum transaction but there was an error. If you imported your account, make sure it has a private key. You can check the private key using the 'Export private key' option under the account dropdown in the upper right.");
       }
@@ -122,7 +122,7 @@ EtherDelta.prototype.alertTxResult = function alertTxResult(err, txsIn) {
       if (txs.findIndex(x => !x.txHash) < 0) {
         let message = 'You just created Ethereum transactions. Track their progress: <br />';
         txs.forEach((tx) => {
-          message += `<a href="http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io/tx/${tx.txHash}" target="_blank">${tx.txHash}</a><br />`;
+          message += `<a href="http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io/tx/${tx.txHash}" target="_blank">${tx.txHash}</a><br />`;
         });
         this.alertDialog(message);
       } else {
@@ -246,7 +246,7 @@ EtherDelta.prototype.showPrivateKey = function showPrivateKey() {
   }
 };
 EtherDelta.prototype.addressLink = function addressLink(address) {
-  return `http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io/address/${address}`;
+  return `http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io/address/${address}`;
 };
 EtherDelta.prototype.contractAddr = function contractAddr(addr) {
   this.config.contractEtherDeltaAddr = addr;
@@ -268,7 +268,7 @@ EtherDelta.prototype.displayAccounts = function displayAccounts(callback) {
       });
     },
     (err, addresses) => {
-      const addressLink = `http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io/address/${this.addrs[this.selectedAccount]}`;
+      const addressLink = `http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io/address/${this.addrs[this.selectedAccount]}`;
       this.ejs(`${this.config.homeURL}/templates/addresses.ejs`, 'addresses', {
         addresses,
         selectedAccount: this.selectedAccount,
@@ -334,7 +334,7 @@ EtherDelta.prototype.loadEvents = function loadEvents(callback) {
             events.forEach((event) => {
               if (!this.eventsCache[event.transactionHash + event.logIndex]) {
                 newEvents += 1;
-                Object.assign(event, { txLink: `http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io/tx/${event.transactionHash}` });
+                Object.assign(event, { txLink: `http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io/tx/${event.transactionHash}` });
                 this.eventsCache[event.transactionHash + event.logIndex] = event;
                 // users with orders to update
                 if (event.event === 'Trade') {
@@ -426,7 +426,7 @@ function displayMyTransactions(ordersIn, blockNumber, callback) {
           }
         }
         if (trade) {
-          const txLink = `http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io/tx/${event.transactionHash}`;
+          const txLink = `http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io/tx/${event.transactionHash}`;
           myEvents.push({
             trade,
             id: (event.blockNumber * 1000) + event.transactionIndex,
@@ -443,7 +443,7 @@ function displayMyTransactions(ordersIn, blockNumber, callback) {
         ) &&
         event.args.user.toLowerCase() === this.addrs[this.selectedAccount].toLowerCase()
       ) {
-        const txLink = `http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io/tx/${event.transactionHash}`;
+        const txLink = `http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io/tx/${event.transactionHash}`;
         const deposit = {
           token: event.args.token === this.selectedToken.addr ?
             this.selectedToken : this.selectedBase,
@@ -465,7 +465,7 @@ function displayMyTransactions(ordersIn, blockNumber, callback) {
         ) &&
         event.args.user.toLowerCase() === this.addrs[this.selectedAccount].toLowerCase()
       ) {
-        const txLink = `http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io/tx/${event.transactionHash}`;
+        const txLink = `http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io/tx/${event.transactionHash}`;
         const withdraw = {
           token: event.args.token === this.selectedToken.addr ?
             this.selectedToken : this.selectedBase,
@@ -698,7 +698,7 @@ EtherDelta.prototype.displayTradesAndChart = function displayTradesAndChart(call
           };
         }
         if (trade) {
-          trade.txLink = `http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io/tx/${event.transactionHash}`;
+          trade.txLink = `http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io/tx/${event.transactionHash}`;
           trades.push(trade);
         }
       }
@@ -1038,7 +1038,7 @@ EtherDelta.prototype.displayAllBalances = function displayAllBalances(callback) 
                   token,
                   balance,
                   balanceOutside,
-                  tokenLink: `http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io/address/${this.addrs[this.selectedAccount]}`,
+                  tokenLink: `http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io/address/${this.addrs[this.selectedAccount]}`,
                 };
                 callbackMap(null, balanceObj);
               });
@@ -1063,7 +1063,7 @@ EtherDelta.prototype.displayAllBalances = function displayAllBalances(callback) 
                   token,
                   balance,
                   balanceOutside,
-                  tokenLink: `http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io/token/${token.addr}`,
+                  tokenLink: `http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io/token/${token.addr}`,
                 };
                 callbackMap(null, balanceObj);
               });
@@ -1740,7 +1740,7 @@ EtherDelta.prototype.addPending = function addPending(err, txsIn) {
   const txs = Array.isArray(txsIn) ? txsIn : [txsIn];
   txs.forEach((tx) => {
     if (!err && tx.txHash && tx.txHash !== '0x0000000000000000000000000000000000000000000000000000000000000000') {
-      Object.assign(tx, { txLink: `https://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io/tx/${tx.txHash}` });
+      Object.assign(tx, { txLink: `https://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io/tx/${tx.txHash}` });
       this.pendingTransactions.push(tx);
     }
   });
@@ -1914,7 +1914,7 @@ EtherDelta.prototype.displayConnectionDescription = function displayConnectionDe
     connection: this.connection,
     contracts: this.config.contractEtherDeltaAddrs,
     contractAddr: this.config.contractEtherDeltaAddr,
-    contractLink: `http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io/address/${this.config.contractEtherDeltaAddr}`,
+    contractLink: `http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io/address/${this.config.contractEtherDeltaAddr}`,
   });
 };
 EtherDelta.prototype.displayTokenGuide = function displayTokenGuide(name) {
@@ -1923,7 +1923,7 @@ EtherDelta.prototype.displayTokenGuide = function displayTokenGuide(name) {
     const token = matchingTokens[0];
     $('#tokenGuideTitle').html(name);
     $('#tokenGuideBody').html('');
-    const tokenLink = `http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io/token/${token.addr}`;
+    const tokenLink = `http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io/token/${token.addr}`;
     this.ejs(`${this.config.homeURL}/tokenGuides/details.ejs`, 'tokenGuideDetails', {
       token,
       tokenLink,
@@ -2139,7 +2139,7 @@ EtherDelta.prototype.loadWeb3 = function loadWeb3(callback) {
     } catch (err) {
       this.connection = {
         connection: 'Proxy',
-        provider: `http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io`,
+        provider: `http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io`,
         testnet: this.config.ethTestnet,
       };
       this.web3.setProvider(undefined);
@@ -2150,7 +2150,7 @@ EtherDelta.prototype.loadWeb3 = function loadWeb3(callback) {
     this.web3 = new Web3();
     this.connection = {
       connection: 'Proxy',
-      provider: `http://${this.config.ethTestnet ? 'testnet.' : ''}etherscan.io`,
+      provider: `http://${this.config.ethTestnet ? 'ropsten.' : ''}etherscan.io`,
       testnet: this.config.ethTestnet,
     };
     callback();
