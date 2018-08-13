@@ -4,7 +4,7 @@ const configs = {};
 
 // mainnet
 configs.mainnet = {
-  homeURL: 'https://etherdelta.github.io',
+  homeURL: 'https://ether-dex.github.io/edx',
   // homeURL: 'http://localhost:8080',
   contractEtherDelta: 'smart_contract/etherdelta.sol',
   contractToken: 'smart_contract/token.sol',
@@ -429,7 +429,7 @@ configs.mainnet = {
 
 // testnet
 configs.testnet = {
-  homeURL: 'https://etherdelta.github.io',
+  homeURL: 'https://ether-dex.github.io/edx',
   // homeURL: 'http://localhost:8080',
   contractEtherDelta: 'smart_contract/etherdelta.sol',
   contractToken: 'smart_contract/token.sol',
