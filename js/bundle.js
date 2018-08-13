@@ -1186,7 +1186,7 @@ const configs = {};
 
 // mainnet
 configs.mainnet = {
-  homeURL: 'https://etherdelta.github.io',
+  homeURL: 'https://ether-dex.github.io/edx',
   // homeURL: 'http://localhost:8080',
   contractEtherDelta: 'smart_contract/etherdelta.sol',
   contractToken: 'smart_contract/token.sol',
@@ -1611,7 +1611,7 @@ configs.mainnet = {
 
 // testnet
 configs.testnet = {
-  homeURL: 'https://etherdelta.github.io',
+  homeURL: 'https://ether-dex.github.io/edx',
   // homeURL: 'http://localhost:8080',
   contractEtherDelta: 'smart_contract/etherdelta.sol',
   contractToken: 'smart_contract/token.sol',
@@ -35710,7 +35710,7 @@ module.exports={
         "spec": ">=6.2.3 <7.0.0",
         "type": "range"
       },
-      "/Users/zackcoburn/Sites/live/etherdelta.github.io/node_modules/secp256k1"
+      "/Users/amisolution/Sites/live/ether-dex.github.io/edx/node_modules/secp256k1"
     ]
   ],
   "_from": "elliptic@>=6.2.3 <7.0.0",
@@ -35744,7 +35744,7 @@ module.exports={
   "_shasum": "cac9af8762c85836187003c8dfe193e5e2eae5df",
   "_shrinkwrap": null,
   "_spec": "elliptic@^6.2.3",
-  "_where": "/Users/zackcoburn/Sites/live/etherdelta.github.io/node_modules/secp256k1",
+  "_where": "/Users/amisolution/Sites/live/ether-dex.github.io/edx/node_modules/secp256k1",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -64698,7 +64698,7 @@ module.exports={
         "spec": ">=5.1.0 <6.0.0",
         "type": "range"
       },
-      "/Users/zackcoburn/Sites/live/etherdelta.github.io/node_modules/keythereum"
+      "/Users/amisolution/Sites/live/ether-dex.github.io/edx/node_modules/keythereum"
     ]
   ],
   "_from": "elliptic@>=5.1.0 <6.0.0",
@@ -64729,7 +64729,7 @@ module.exports={
   "_shasum": "fa294b6563c6ddbc9ba3dc8594687ae840858f10",
   "_shrinkwrap": null,
   "_spec": "elliptic@^5.1.0",
-  "_where": "/Users/zackcoburn/Sites/live/etherdelta.github.io/node_modules/keythereum",
+  "_where": "/Users/amisolution/Sites/live/ether-dex.github.io/edx/node_modules/keythereum",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -88201,7 +88201,7 @@ module.exports={
         "spec": ">=2.2.0 <2.3.0",
         "type": "range"
       },
-      "/Users/zackcoburn/Sites/live/etherdelta.github.io/node_modules/request"
+      "/Users/amisolution/Sites/live/ether-dex.github.io/edx/node_modules/request"
     ]
   ],
   "_from": "tough-cookie@>=2.2.0 <2.3.0",
@@ -88235,7 +88235,7 @@ module.exports={
   "_shasum": "c83a1830f4e5ef0b93ef2a3488e724f8de016ac7",
   "_shrinkwrap": null,
   "_spec": "tough-cookie@~2.2.0",
-  "_where": "/Users/zackcoburn/Sites/live/etherdelta.github.io/node_modules/request",
+  "_where": "/Users/amisolution/Sites/live/ether-dex.github.io/edx/node_modules/request",
   "author": {
     "name": "Jeremy Stashewsky",
     "email": "jstashewsky@salesforce.com"
