@@ -1750,7 +1750,7 @@ function EtherDelta() {
   this.language = 'en';
   this.minOrderSize = 0.001;
   this.messageToSend = undefined;
-  this.blockTimeSnapshot = { blockNumber: 3768763, date: new Date('Feb-10-2017 01:40:47') }; // default snapshot
+  this.blockTimeSnapshot = { blockNumber: 3154928, date: new Date('Feb-10-2017 01:40:47') }; // default snapshot
   this.translator = undefined;
   this.secondsPerBlock = 15;
   this.usersWithOrdersToUpdate = {};
