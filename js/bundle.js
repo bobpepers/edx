@@ -1592,7 +1592,7 @@ configs.mainnet = {
     { token: 'ETH', base: 'USD.DC' },
     { token: 'ETH', base: 'BTC.DC' },
   ],
-  ordersOnchain: false,
+  ordersOnchain: true,
   gitterHost: 'https://api.gitter.im',
   gitterStream: 'stream.gitter.im',
   gitterToken: '7e7772f3f3b2b715122f0d1789cf173ef49238da',
@@ -1641,6 +1641,16 @@ configs.testnet = {
       gasOrder: 250000,
     },
     {
+      addr: '0x4875ae0e3Fdfb9779D92B4c7bC5cE852434442b3',
+      name: 'AMIS',
+      decimals: 18,
+      gasApprove: 250000,
+      gasDeposit: 250000,
+      gasWithdraw: 250000,
+      gasTrade: 250000,
+      gasOrder: 250000,
+    },
+    {
       addr: '0x40aade55175aaeed9c88612c3ed2ff91d8943964',
       name: '1ST',
       decimals: 18,
@@ -1651,8 +1661,8 @@ configs.testnet = {
       gasOrder: 250000,
     },
   ],
-  pairs: [{ token: '1ST', base: 'ETH' }],
-  ordersOnchain: false,
+  pairs: [{ token: 'ETH', base: '1ST' }],
+  ordersOnchain: true,
   gitterHost: 'https://api.gitter.im',
   gitterStream: 'stream.gitter.im',
   gitterToken: '7e7772f3f3b2b715122f0d1789cf173ef49238da',
@@ -1738,11 +1748,11 @@ function EtherDelta() {
   this.pendingTransactions = [];
   this.defaultdecimals = new BigNumber(1000000000000000000);
   this.language = 'en';
-  this.minOrderSize = 0.1;
+  this.minOrderSize = 0.001;
   this.messageToSend = undefined;
   this.blockTimeSnapshot = { blockNumber: 3154928, date: new Date('Feb-10-2017 01:40:47') }; // default snapshot
   this.translator = undefined;
-  this.secondsPerBlock = 14;
+  this.secondsPerBlock = 15;
   this.usersWithOrdersToUpdate = {};
   this.apiServerNonce = undefined;
   this.ordersResult = { orders: [], blockNumber: 0 };
