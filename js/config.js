@@ -388,6 +388,7 @@ configs.mainnet = {
     },
   ],
   pairs: [
+    { token: 'AMIS', base: 'ETH' },
     { token: 'PLU', base: 'ETH' },
     { token: '1ST', base: 'ETH' },
     { token: 'EDG', base: 'ETH' },
@@ -461,6 +462,16 @@ configs.testnet = {
       gasOrder: 250000,
     },
     {
+      addr: '0x4875ae0e3fdfb9779d92b4c7bc5ce852434442b3',
+      name: 'AMIS',
+      decimals: 18,
+      gasApprove: 250000,
+      gasDeposit: 250000,
+      gasWithdraw: 250000,
+      gasTrade: 250000,
+      gasOrder: 250000,
+    },
+    {
       addr: '0x40aade55175aaeed9c88612c3ed2ff91d8943964',
       name: '1ST',
       decimals: 18,
@@ -471,7 +482,7 @@ configs.testnet = {
       gasOrder: 250000,
     },
   ],
-  pairs: [{ token: '1ST', base: 'ETH' }],
+  pairs: [{ token: 'AMIS', base: 'ETH' }],
   ordersOnchain: true,
   gitterHost: 'https://api.gitter.im',
   gitterStream: 'stream.gitter.im',
