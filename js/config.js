@@ -495,8 +495,8 @@ configs.testnet = {
   eventsCacheCookie: 'EtherDelta_eventsCache_testnet',
   deadOrdersCacheCookie: 'EtherDelta_deadOrdersCache_testnet',
   ordersCacheCookie: 'EtherDelta_ordersCache_testnet',
-  defaultToken: 0,
-  defaultBase: 1,
+  defaultToken: 1,
+  defaultBase: 0,
   etherscanAPIKey: 'GCGR1C9I17TYIRNYUDDEIJH1K5BRPH4UDE',
 };
 
