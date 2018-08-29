@@ -5,8 +5,8 @@ const config = {
   },
   pairs: [
     {
-      pair: '1ST/ETH',
-      expires: 100,
+      pair: 'AMIS/ETH',
+      expires: 1000,
       sellEnabled: 'onOrders/balance<0.25',
       sellNum: 5,
       sellVolume: 'Math.max(balance - onOrders, 0) / n * (0.9 + Math.random()*0.1)',
@@ -14,7 +14,7 @@ const config = {
       buyEnabled: 'onOrders/balance<0.25',
       buyNum: 5,
       buyVolume: 'Math.max(balance - onOrders, 0) / n / price * (0.9 + Math.random()*0.1)',
-      buyPrice: '0.001 - 0.0005 * i / n',
+      buyPrice: '0.0000011 - 0.000001 * i / n',
     },
   ],
 };
