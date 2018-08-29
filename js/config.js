@@ -438,6 +438,7 @@ configs.testnet = {
   contractReserveToken: 'smart_contract/reservetoken.sol',
   contractEtherDeltaAddrs: [
     { addr: '0x228344536a03c0910fb8be9c2755c1a0ba6f89e1', info: 'Deployed 02/09/2017' },
+    { addr: '0xb5ace61ac9511de68a7e1e385c96b3e33692fabe', info: 'CreedEx Deployed 27/08/2018' },
     { addr: '0xf80cd360e96fa96b8b7d9e95d5a7911ac5f09ec2', info: 'Deployed 10/24/2016' },
     { addr: '0xcdd152384c55dd4e5b5a3128cc90e0d9311570de', info: 'Deployed 10/06/2016' },
     { addr: '0x24b0ed7ba8d6d969bfe8409b4e6aeee3a40f8855', info: 'Deployed 08/03/2016' },
@@ -461,9 +462,9 @@ configs.testnet = {
       gasOrder: 250000,
     },
     {
-      addr: '0x4875ae0e3fdfb9779d92b4c7bc5ce852434442b3',
+      addr: '0x949bed886c739f1a3273629b3320db0c5024c719',
       name: 'AMIS',
-      decimals: 18,
+      decimals: 9,
       gasApprove: 250000,
       gasDeposit: 250000,
       gasWithdraw: 250000,
